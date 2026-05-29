@@ -1,10 +1,10 @@
 import { IoSearch } from "react-icons/io5";
 import { FaCartPlus } from "react-icons/fa";
 import { MdLightMode, MdModeNight } from "react-icons/md";
+import { useThemeStore } from "../store/themeStore";
 
 const Navbar = () => {
-  const isDark = true; // tạm thời hardcode, sau gắn Zustand
-
+  const { isDark, toggleTheme } = useThemeStore();
   return (
     <nav className="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-md">
       <div className="container mx-auto flex h-16 items-center gap-6 px-6">
@@ -45,7 +45,10 @@ const Navbar = () => {
           </div>
 
           {/* Toggle theme */}
-          <button className="flex items-center justify-center rounded-full w-9 h-9 border border-white/10 text-white/60 hover:text-white hover:border-white/30 transition">
+          <button
+            className="flex items-center justify-center rounded-full w-9 h-9 border border-white/10 text-white/60 hover:text-white hover:border-white/30 transition"
+            onClick={toggleTheme}
+          >
             {isDark ? <MdLightMode size={18} /> : <MdModeNight size={18} />}
           </button>
 
