@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
 import { useEffect } from "react";
 import { useThemeStore } from "./store/themeStore";
 
@@ -12,10 +13,11 @@ function App() {
       document.documentElement.classList.remove("dark");
     }
   }, [isDark]);
-  
+
   return (
     <>
       <Navbar />
+      <Home />
     </>
   );
 }
