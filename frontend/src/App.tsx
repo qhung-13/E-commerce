@@ -1,5 +1,5 @@
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./pages/Home/Home";
 import { useEffect } from "react";
 import { useThemeStore } from "./store/themeStore";
 
@@ -7,10 +7,11 @@ function App() {
   const { isDark } = useThemeStore();
 
   useEffect(() => {
+    console.log("isDark", isDark);
     if (isDark) {
-      document.documentElement.classList.add("dark");
+      document.body.classList.add("dark");
     } else {
-      document.documentElement.classList.remove("dark");
+      document.body.classList.remove("dark");
     }
   }, [isDark]);
 

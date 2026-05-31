@@ -1,2 +1,54 @@
-@import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *));
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #ffffff;
+  --bg2: #f5f5f5;
+  --bg3: #eeeeee;
+  --surface: #ffffff;
+  --border: rgba(0,0,0,0.08);
+  --text: #111111;
+  --text2: #555555;
+  --text3: #999999;
+  --accent: #6366F1;
+  --accent2: #818CF8;
+  --green: #10B981;
+  --red: #EF4444;
+  --gold: #F59E0B;
+  --font: 'DM Sans', sans-serif;
+  --font-display: 'Syne', sans-serif;
+  --r: 12px;
+  --r2: 20px;
+  --shadow: 0 2px 12px rgba(0,0,0,0.08);
+  --shadow2: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+.dark {
+  --bg: #0A0A0F;
+  --bg2: #111118;
+  --bg3: #1A1A24;
+  --surface: #1E1E2E;
+  --border: rgba(255,255,255,0.08);
+  --text: #F0F0F8;
+  --text2: #9898B0;
+  --text3: #5A5A72;
+  --shadow: 0 2px 12px rgba(0,0,0,0.3);
+  --shadow2: 0 8px 32px rgba(0,0,0,0.5);
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.3s, color 0.3s;
+}
+
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; border: none; outline: none; font-family: var(--font); }
+img { max-width: 100%; display: block; }
+input { font-family: var(--font); }
+
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
