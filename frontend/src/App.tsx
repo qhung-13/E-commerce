@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
+import Footer from "./components/Footer/Footer";
 import { useEffect } from "react";
 import { useThemeStore } from "./store/themeStore";
 
@@ -19,6 +20,7 @@ function App() {
     <>
       <Navbar />
       <Home />
+      <Footer />
     </>
   );
 }
