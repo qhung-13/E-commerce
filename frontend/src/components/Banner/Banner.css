@@ -1,0 +1,99 @@
+.banner {
+  position: relative;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--bg) 65%);
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+
+.banner-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.banner-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.banner-content {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.banner-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent2);
+}
+
+.banner-title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  color: var(--text);
+}
+
+.banner-sub {
+  font-size: 16px;
+  color: var(--text2);
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+.banner-cta {
+  width: fit-content;
+  background: var(--accent);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.2s;
+  margin-top: 8px;
+}
+
+.banner-cta:hover {
+  background: var(--accent2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(99,102,241,0.4);
+}
+
+.banner-stats {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.banner-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.banner-stat-value {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.banner-stat-label {
+  font-size: 13px;
+  color: var(--text2);
+}
