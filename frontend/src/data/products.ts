@@ -165,3 +165,7 @@ export const featuredCategories = [
     color: "#3B82F6",
   },
 ];
+
+export const flashSaleProducts = products
+  .filter((p) => p.originalPrice > p.price)
+  .slice(0, 4);
