@@ -120,3 +120,48 @@ export const products: Product[] = [
     specs: ["Khung Aluminium", "21 tốc độ", "Phanh đĩa", "Size M/L"],
   },
 ];
+
+export const featuredCategories = [
+  {
+    id: "electronics",
+    name: "Điện tử",
+    icon: "💻",
+    count: "2,341 sản phẩm",
+    color: "#6366F1",
+  },
+  {
+    id: "fashion",
+    name: "Thời trang",
+    icon: "👗",
+    count: "5,120 sản phẩm",
+    color: "#EC4899",
+  },
+  {
+    id: "home",
+    name: "Nhà cửa",
+    icon: "🏠",
+    count: "1,893 sản phẩm",
+    color: "#F59E0B",
+  },
+  {
+    id: "sports",
+    name: "Thể thao",
+    icon: "⚽",
+    count: "987 sản phẩm",
+    color: "#10B981",
+  },
+  {
+    id: "beauty",
+    name: "Làm đẹp",
+    icon: "💄",
+    count: "3,210 sản phẩm",
+    color: "#F97316",
+  },
+  {
+    id: "books",
+    name: "Sách",
+    icon: "📚",
+    count: "4,560 sản phẩm",
+    color: "#3B82F6",
+  },
+];

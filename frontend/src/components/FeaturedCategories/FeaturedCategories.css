@@ -1,0 +1,70 @@
+.featured-cats-title {
+    margin-bottom: 24px;
+}
+
+.featured-cats-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+
+.featured-cat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 28px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  cursor: pointer;
+  transition: all 0.25s;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-cat-card::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--cat-color);
+}
+
+.featured-cat-card:hover {
+  border-color: var(--cat-color);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.featured-cat-icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--cat-color) 15%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featured-cat-icon {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.featured-cat-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  display: block;
+}
+
+.featured-cat-count {
+  font-size: 11px;
+  color: var(--text3);
+  display: block;
+}
