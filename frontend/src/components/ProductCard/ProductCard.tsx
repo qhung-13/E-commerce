@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useCartStore } from "../../store/cartStore";
 import type { Product } from "../../data/products";
-import "./ProductCard.css"
+import { useNavigate } from "react-router-dom";
+import "./ProductCard.css";
 
 interface Props {
   product: Product;
@@ -15,6 +16,7 @@ const fmt = (n: number) =>
 const ProductCard = ({ product }: Props) => {
   const [added, setAdded] = useState(false);
   const { addItem } = useCartStore();
+  const navigate = useNavigate();
 
   const discount = Math.round(
     (1 - product.price / product.originalPrice) * 100,
@@ -27,7 +29,10 @@ const ProductCard = ({ product }: Props) => {
   };
 
   return (
-    <div className="product-card">
+    <div
+      className="product-card"
+      onClick={() => navigate(`/product/${product.id}`)}
+    >
       <div className="product-card-img">
         <img src={product.image} alt={product.name} />
         {product.badge && (

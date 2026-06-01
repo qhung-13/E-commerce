@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 import Footer from "./components/Footer/Footer";
+import ProductDetail from "./pages/ProductDetail/ProductDetail";
 import { useEffect } from "react";
 import { useThemeStore } from "./store/themeStore";
 
@@ -22,7 +23,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* Sau thêm ProductDetail và Orders vào đây */}
+        <Route path="/product/:id" element={<ProductDetail />} />
       </Routes>
       <Footer />
     </div>
