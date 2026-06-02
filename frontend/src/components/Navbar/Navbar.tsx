@@ -2,10 +2,12 @@ import { IoSearch } from "react-icons/io5";
 import { FaCartPlus } from "react-icons/fa";
 import { MdLightMode, MdModeNight } from "react-icons/md";
 import { useThemeStore } from "../../store/themeStore";
+import { useCartStore } from "../../store/cartStore";
 import "./Navbar.css";
 
 const Navbar = () => {
   const { isDark, toggleTheme } = useThemeStore();
+  const { count, toggleCart } = useCartStore();
 
   return (
     <nav className="navbar">
@@ -35,9 +37,9 @@ const Navbar = () => {
             {isDark ? <MdLightMode size={18} /> : <MdModeNight size={18} />}
           </button>
 
-          <button className="navbar-cart-btn">
+          <button className="navbar-cart-btn" onClick={toggleCart}>
             <FaCartPlus size={18} />
-            <span className="navbar-cart-badge">0</span>
+            <span className="navbar-cart-badge">{count}</span>
           </button>
         </div>
       </div>
