@@ -145,3 +145,12 @@
   align-items: center;
   justify-content: center;
 }
+
+.navbar-orders-link {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text2);
+  transition: color 0.2s;
+}
+
+.navbar-orders-link:hover { color: var(--text); }

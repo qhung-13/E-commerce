@@ -6,7 +6,7 @@ import ProductDetail from "./pages/ProductDetail/ProductDetail";
 import CartDrawer from "./components/CartDrawer/CartDrawer";
 import { useEffect } from "react";
 import { useThemeStore } from "./store/themeStore";
-
+import Orders from "./pages/Orders/Orders";
 function App() {
   const { isDark } = useThemeStore();
 
@@ -26,6 +26,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/orders" element={<Orders />} />
       </Routes>
       <Footer />
     </div>

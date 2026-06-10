@@ -1,0 +1,123 @@
+.orders-page {
+  padding: 40px 0 60px;
+}
+
+.orders-title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 32px;
+}
+
+.orders-empty {
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--text3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.orders-empty span { font-size: 56px; }
+.orders-empty p { font-size: 16px; color: var(--text2); }
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.order-card:hover { border-color: var(--accent); }
+
+.order-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.order-id {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.order-date {
+  font-size: 12px;
+  color: var(--text3);
+}
+
+.order-status {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 20px;
+}
+
+.order-status.delivered {
+  background: rgba(16,185,129,0.15);
+  color: var(--green);
+}
+
+.order-status.shipping {
+  background: rgba(99,102,241,0.15);
+  color: var(--accent2);
+}
+
+.order-status.pending {
+  background: rgba(245,158,11,0.15);
+  color: var(--gold);
+}
+
+.order-status.cancelled {
+  background: rgba(239,68,68,0.15);
+  color: var(--red);
+}
+
+.order-card-items {
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.order-item-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.order-item-name { flex: 1; color: var(--text2); }
+.order-item-qty { color: var(--text3); min-width: 30px; }
+.order-item-price { color: var(--accent); font-weight: 600; }
+
+.order-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-top: 1px solid var(--border);
+  background: var(--bg3);
+}
+
+.order-total-label { font-size: 13px; color: var(--text3); }
+
+.order-total {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+}

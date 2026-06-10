@@ -3,6 +3,7 @@ import { FaCartPlus } from "react-icons/fa";
 import { MdLightMode, MdModeNight } from "react-icons/md";
 import { useThemeStore } from "../../store/themeStore";
 import { useCartStore } from "../../store/cartStore";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -41,6 +42,10 @@ const Navbar = () => {
             <FaCartPlus size={18} />
             <span className="navbar-cart-badge">{count}</span>
           </button>
+
+          <Link to="/orders" className="navbar-orders-link">
+            Đơn hàng
+          </Link>
         </div>
       </div>
     </nav>
