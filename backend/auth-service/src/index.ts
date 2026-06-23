@@ -13,12 +13,12 @@ app.use(helmet());
 app.use(cors());
 app.use(express.json());
 
-app.use("./api/auth", authRoutes);
+app.use("/api/auth", authRoutes);
 
 app.get("/health", (req, res) => {
-  res.json({ status: "Oke", service: "auth-services" });
+  res.json({ status: "ok", service: "auth-service" });
 });
 
 app.listen(PORT, () => {
-    console.log(`Auth service running on port ${PORT}`)
-})
+  console.log(`Auth service running on port ${PORT}`);
+});

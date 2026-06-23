@@ -1,18 +1,11 @@
-import { Request, Response, NextFunction } from 'express'
-import { verifyToken } from '../utils/jwt.utils'
+import { Router } from "express";
+import { register, login, getMe } from "../controllers/auth.controller";
+import { protect } from "../middlewares/auth.middleware";
 
-export const protect = (req: Request, res: Response, next: NextFunction) => {
-  try {
-    const token = req.headers.authorization?.split(' ')[1]
-    if (!token) {
-      return res.status(401).json({ message: 'Không có token' })
-    }
+const router = Router();
 
-    const decoded = verifyToken(token)
-    req.body.userId = decoded.id
-    req.body.userRole = decoded.role
-    next()
-  } catch {
-    return res.status(401).json({ message: 'Token không hợp lệ' })
-  }
-}
+router.post("/register", register);
+router.post("/login", login);
+router.get("/me", protect, getMe);
+
+export default router;
